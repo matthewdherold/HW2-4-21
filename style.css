@@ -1,0 +1,19 @@
+body {
+    text-align: center;
+    padding: 10ch;
+}
+div {
+    padding: 4ch;
+}
+
+.good {
+    color: green;
+}
+
+.moderate {
+    color: yellow;
+}
+
+.warning {
+    color: orange;
+}
