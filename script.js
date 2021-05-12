@@ -50,7 +50,7 @@ searchSubmit = (searchInput) => {
     var forecast = $(`#searchResults`);
     forecast.empty();
     console.log(searchInput);
-    var URL = `http://api.openweathermap.org/data/2.5/forecast?q=${searchInput}&appid=d91f911bcf2c0f925fb6535547a5ddc9&units=imperial`;
+    var URL = `https://api.openweathermap.org/data/2.5/forecast?q=${searchInput}&appid=d91f911bcf2c0f925fb6535547a5ddc9&units=imperial`;
     fetch(URL)
       .then((res) => res.json())
       .then((data) => {
@@ -76,7 +76,7 @@ searchSubmit = (searchInput) => {
                 forecast.append(forecastEntry);
           };
         };
-          fetch(`http://api.openweathermap.org/data/2.5/weather?q=${searchInput}&appid=d91f911bcf2c0f925fb6535547a5ddc9&units=imperial`)
+          fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchInput}&appid=d91f911bcf2c0f925fb6535547a5ddc9&units=imperial`)
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
