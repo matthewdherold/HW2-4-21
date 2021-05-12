@@ -1,5 +1,5 @@
 var searchEnter = $("#searchEnter");
-var searchHistory = [];
+var searchHistory = ["Paris", "New York", "London"];
 var lat = "";
 var lon = "";
 if (JSON.parse(localStorage.getItem('history'))) {
