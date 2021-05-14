@@ -50,8 +50,7 @@ searchSubmit = (searchInput) => {
     var forecast = $(`#searchResults`);
     forecast.empty();
     console.log(searchInput);
-    var URL = `https://api.openweathermap.org/data/2.5/forecast?q=${searchInput}&appid=d91f911bcf2c0f925fb6535547a5ddc9&units=imperial`;
-    fetch(URL)
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${searchInput}&appid=d91f911bcf2c0f925fb6535547a5ddc9&units=imperial`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -95,7 +94,7 @@ searchSubmit = (searchInput) => {
                 Humidity : ${data.main.humidity} %`);
                 currentResult.append(currentIcon);
             
-            fetch(`http://api.openweathermap.org/data/2.5/uvi?appid=d91f911bcf2c0f925fb6535547a5ddc9&lat=${lat}&lon=${lon}`)
+            fetch(`https://api.openweathermap.org/data/2.5/uvi?appid=d91f911bcf2c0f925fb6535547a5ddc9&lat=${lat}&lon=${lon}`)
                 .then((res) => res.json())
                 .then((data) => {
                     console.log(data)
